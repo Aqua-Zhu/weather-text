@@ -41,86 +41,9 @@ function App() {
                                 <p><IoUmbrellaOutline />0%</p>
                             </div>
                         </article>
-
-                        <article>
-                            <h4>2日</h4>
-                            <p>上午6:00</p>
-                            <p>~</p>
-                            <p>下午6:00</p>
-                            <figure>
-                                <img src="./react-test1112/weatherIcon/晴時多雲.svg" alt="" />
-                            </figure>
-                            <p>晴時多雲</p>
-                            <div>
-                                <p><IoUmbrellaOutline />0%</p>
-                            </div>
-                        </article>
-
-                        <article>
-                            <h4>2日</h4>
-                            <p>上午6:00</p>
-                            <p>~</p>
-                            <p>下午6:00</p>
-                            <figure>
-                                <img src="./react-test1112/weatherIcon/晴時多雲.svg" alt="" />
-                            </figure>
-                            <p>晴時多雲</p>
-                            <div>
-                                <p><IoUmbrellaOutline />0%</p>
-                            </div>
-                        </article>
-                    </section>
-                </div>
-
-                <div className="city">
-                    <h3>新北市</h3>
-                    <section className="box">
-                        <article>
-                            <h4>2日</h4>
-                            <p>上午6:00</p>
-                            <p>~</p>
-                            <p>下午6:00</p>
-                            <figure>
-                                <img src="./react-test1112/weatherIcon/晴時多雲.svg" alt="" />
-                            </figure>
-                            <p>晴時多雲</p>
-                            <div>
-                                <p><IoUmbrellaOutline />0%</p>
-                            </div>
-                        </article>
-
-                        <article>
-                            <h4>2日</h4>
-                            <p>上午6:00</p>
-                            <p>~</p>
-                            <p>下午6:00</p>
-                            <figure>
-                                <img src="./react-test1112/weatherIcon/晴時多雲.svg" alt="" />
-                            </figure>
-                            <p>晴時多雲</p>
-                            <div>
-                                <p><IoUmbrellaOutline />0%</p>
-                            </div>
-                        </article>
-
-                        <article>
-                            <h4>2日</h4>
-                            <p>上午6:00</p>
-                            <p>~</p>
-                            <p>下午6:00</p>
-                            <figure>
-                                <img src="./react-test1112/weatherIcon/晴時多雲.svg" alt="" />
-                            </figure>
-                            <p>晴時多雲</p>
-                            <div>
-                                <p><IoUmbrellaOutline />0%</p>
-                            </div>
-                        </article>
                     </section>
                 </div>
             </div>
-
-
         </>
     )
 }
