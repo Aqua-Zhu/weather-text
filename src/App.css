@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+#row{
+    display: flex;
+
+}
+.city{
+    border: 1px solid black;
+    margin: 20px auto;
+    width: 40%
+    
+}
+h3{
+    padding: 20px 0;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+}
+section{
+    display: flex;
+    margin: 30px;
+    justify-content: space-around;
+}
+article{
+    margin: 30px;
+    text-align: center;
+}

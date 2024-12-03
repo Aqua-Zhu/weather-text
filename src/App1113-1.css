@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.content .box h2 {
+    color: red;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.content .box {
+    color: #666;
+    width: 300px;
+    text-align: center;
+}
+
+/* 主標 */
+h1 {
+    background-color: red;
+    text-align: center;
+    color: aliceblue;
+    padding: 40px 0;
+}
+
+/* 推薦課程 */
+h2.lesson0 {
+    color: green;
+    text-align: center;
+    line-height: 100px;
+}
+
+/* 課程 */
+#box {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 50px auto;
+}
+
+#box .lesson1 {
+    width: 300px;
+    /* 陰影:水平 垂直 擴散度 色彩 */
+    box-shadow: 1px 1px 5px #000;
+    padding: 10px;
+}
+
+#box .lesson1 h3 {
+    font-size: 20px;
+}
+
+#box .lesson1 .pp {
+    line-height: 1.2;
+    color: rgb(77, 158, 158);
+}
+
+#box .lesson1 .p2 {
+    color: #666;
+}
+
+#box .lesson1 span {
+    color: #333;
+    text-decoration: line-through;
+}
+
+#box .lesson1 .span2 {
+    color: red;
+    font-size: 18px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+#box button {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 100%;
+    line-height: 30px;
+    border-radius: 5px;
+}
+
+div .name {
+    background-color: #333;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+}
