@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper {
+            margin: 0 auto;
+            width: 600px;
+            text-align: justify;
+        }
+
+        #wrapper .btnArea {
+            padding-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        p {
+            padding-bottom: 2rem;
+            font-size: 1rem;
+            line-height: 1.8rem;
+        }
+
+        .modalBtn {
+            display: inline-block;
+            padding: 15px 30px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 700;
+            color: white;
+            background-color: darkslategray ;
+            opacity: 0.8;
+            border-radius: 20px;
+            transition:.3s;
+        }
+
+        .modalBtn:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        #mdOverlay {
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: fixed;
+            z-index: 97;
+            background-color: #000;
+            display: none;
+        }
+
+        #mdWindow{
+            margin-top: -200px;
+            margin-left: -250px;
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 400px;
+            position: fixed;
+            z-index: 98;
+            background: white;
+            display: none;
+        }
+
+        #mdWindow > .mdClose{
+            top: -15px;
+            right: -15px;
+            width: 30px;
+            height: 30px;
+            line-height: 30;
+            color:white;
+            font-size: 1.5rem;
+            background: #757575;
+            border-radius: 30px;
+            position: absolute;
+            z-index: 99;
+            cursor: pointer;
+            box-shadow: 0 0 3px 0 #000;
+        }
+        #modalInclude{
+            display: none;
+        }
+        #contWrap{
+            margin: 30px auto;
+            padding: 0 20px;
+            width: 100%;
+            height: 340px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        #contWrap h2{
+            margin-bottom: 20px;
+            padding: 20px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: #333 1px dotted;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div class="btnArea">
+            <a href="#modalInclude" class="modalBtn"> 開啟跳出視窗</a>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facere sequi delectus qui ipsum id ex nobis
+            iusto! Vitae eius facilis quia eaque reprehenderit. Quidem ea provident modi vero molestias.
+            Quaerat accusantium minus eos consequuntur repudiandae tempore quia impedit, omnis quam, ex non, saepe totam
+            id beatae mollitia animi inventore! Voluptatibus aliquam perspiciatis dicta enim nam nesciunt tempora
+            commodi accusamus!
+            Nulla aspernatur ipsum consequuntur, minus magni consequatur expedita autem nesciunt enim unde dolorem
+            beatae deserunt iusto totam nemo fugiat. Ad maxime perferendis iusto adipisci aperiam voluptatibus libero
+            rem esse. Saepe.
+            Asperiores eius, dicta sed ducimus placeat minus consequuntur eligendi quia, recusandae, in vero iusto
+            perferendis dolor nihil. Assumenda incidunt quidem laboriosam cum autem, laborum quis velit, natus ex ipsum
+            quam.
+            Qui nobis delectus odit optio provident eveniet molestias repellat ea! Dolorem illo dicta soluta quibusdam
+            obcaecati possimus nesciunt architecto officia quam, quis doloremque, exercitationem cumque voluptate at
+            ipsam sed! Explicabo.
+            Sunt quos ea nihil natus quaerat placeat velit consequatur, accusantium sapiente nam, dignissimos fugit nisi
+            reprehenderit excepturi debitis ut suscipit dolore quo doloremque assumenda. At suscipit officiis explicabo
+            voluptates iste!
+            Rem explicabo error minus blanditiis ea, iste nisi earum, quasi debitis, magni culpa perferendis et
+            excepturi vero iusto fugit doloribus fuga minima. Quidem numquam sunt officiis, ad blanditiis a ea.
+            Asperiores in veniam beatae deserunt modi saepe eligendi! Quisquam, facilis voluptates dignissimos
+            aspernatur, consequatur fugit nam eaque, adipisci sequi ratione facere? Eius autem, velit nulla dolor culpa
+            architecto in neque?
+            Tempora expedita placeat quam fugiat architecto perspiciatis distinctio omnis minus vel incidunt ducimus
+            iure nulla dolor, laudantium quos eos. Commodi vel voluptate non, nesciunt dolorem velit illum delectus quam
+            necessitatibus?
+            Tempora maiores ab, enim, odit molestiae, consequatur temporibus aliquid aliquam praesentium blanditiis eum!
+            Voluptate ullam nulla non asperiores ipsum perferendis maxime, soluta molestias neque, iure adipisci sunt
+            sed corrupti! Deleniti!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, saepe.</p>
+    </div>
+
+
+    <div id="modalInclude">
+        <h2>視窗區域內容</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed perferendis quos neque officiis minima rem
+            nihil aliquid aut exercitationem explicabo eligendi repellat at, aperiam magnam consectetur excepturi sit
+            quidem esse iure dolorem accusantium voluptates eos et magni. Molestias quam, facere sequi error sed
+            impedit, numquam ullam expedita consequatur, culpa nemo recusandae possimus. Doloremque itaque est fugiat?
+            Ipsa, incidunt! Corporis, mollitia! Necessitatibus, temporibus ad ratione fugiat ipsa sint ut est iusto
+            totam laborum deserunt, facere sequi tenetur doloremque sapiente earum quaerat commodi praesentium corporis?
+            Maiores reiciendis accusamus pariatur tempora necessitatibus quod, sequi suscipit debitis. Mollitia iusto
+        </p>
+    </div>
+    <!-- <div id="mdOverlay"></div>
+    <div id="mdWindow">
+        <div class="mdClose">x</div>
+        <div id="contWrap"></div>
+    </div> -->
+
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-popblock.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    .cssAniml{
+        width: 360px;
+        height: 400px;
+        display: block;
+        border: 1px solid darkcyan;
+        overflow: hidden;
+    }
+    .cssAniml img{
+        width: 100%;
+        transition: all .3s;
+    }
+    .imgScale:hover img{
+        transform: scale(1.5);
+    }
+</style>
+</head>
+<body>
+<div class="wrapper">
+    <h2>動態新增刪除功能</h2>
+    <ul>
+        <li>新增類別 => addClass()</li>
+        <li>刪除類別 => removeClass()</li>
+    </ul>
+    <hr>
+    <a href="#" class="cssAniml">
+        <img src="./images/05.jpg" alt="">
+    </a>
+</div>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function(){
+        $('.cssAniml').hover(function(){
+            $(this).addClass('imgScale');
+        },function(){
+            $(this).removeClass('imgScale');
+        })
+    })
+</script>
+</body>
+</html>

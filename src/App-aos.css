@@ -1,0 +1,10 @@
+.cssAnimal{
+width: 80%;
+height: 300px;
+background-color: black;
+color: white;
+transition: all .3 linear;
+display: flex;
+justify-content: center;
+align-items: center;
+}

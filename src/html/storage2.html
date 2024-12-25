@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>取出storage變數</h2>
+    <hr>
+    <p id="showData"></p>
+    <button id="btn1">清除storage元素</button><br>
+    <button id="btn2">清除Allstorage元素</button>
+    <br>
+    <script>
+        // let var1 = window.localStorage.getItem('var1');
+        let varAll = '';
+        for (let i = 0; i < window.localStorage.length; i++) {
+            // let data= window.localStorage.key(i);
+            // varAll = data;
+            // document.getElementById('showData').textContent = varAll;
+            let curKey = window.localStorage.key(i);
+
+            // \n => 跳脫字元 => 搭配innerText
+            // <br> => HTML元素 => 搭配innerHTML
+            // 純文字內容 => 搭配TextContent
+            varAll = varAll + ',' + window.localStorage.getItem(curKey) + '\n';
+            // varAll = varAll+','+window.localStorage.getItem(curKey)+'<br>';
+            // varAll = varAll+','+window.localStorage.getItem(curKey);
+        }
+        document.getElementById('showData').innerText = varAll;
+        // document.getElementById('showData').innerHTML = varAll;
+        // document.getElementById('showData').textContent = varAll;
+
+
+        // document.getElementById('showData').textContent = var1;
+        // document.write(var1);
+        let btn1 = document.getElementById('btn1');
+        window.addEventListener('click', (btn1) => {
+            window.localStorage.removeItem(var1);
+            document.getElementById('showData').textContent = 'storage var1 已清除';
+        });
+        window.addEventListener('click', (btn2) => {
+            window.localStorage.clear();
+            document.getElementById('showData').textContent = 'storage已清除';
+        });
+    </script>
+</body>
+
+</html>

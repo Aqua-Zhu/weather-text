@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery -->
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h1>非前端框架的jQuery使用</h1>
+    <hr>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>click1</p>
+        <p>click2</p>
+        <hr>
+    </div>
+
+    <script>
+
+        $(function () {
+            $('p').click(function () {
+                // hide() = > 不顯示
+                $(this).hide();
+            })
+        })
+
+        // $(()=>{
+        //     $('p').click(()=>{
+        //         // hide() = > 不顯示
+        //         $(this).hide();
+        //     })
+        // })
+    </script>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button>
+    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <script>
+        $(function () {
+            $('#show').click(function () {
+                $('.p').show(350);
+            });
+            $('#hide').click(function () {
+                $('.p').hide(350);
+            });
+            $('#toggle').click(function () {
+                $('.p').toggle(350);
+            });
+
+        });
+    </script>
+    <hr>
+
+    <button id="btn">領域展開</button>
+    <button id="btn2">好折凳</button>
+    <button id="btn3">雙向融合</button>
+    <div id="content"
+        style="display: none; margin: 20px 0 ; height: 50px;padding: 50px; background-color: cadetblue; color: white; text-align: center;">
+        強壯路人的機場
+    </div>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                $('#content').slideDown(350);
+            });
+            $('#btn2').click(function () {
+                $('#content').slideUp(350);
+            });
+            $('#btn3').click(function () {
+                $('#content').slideToggle(350);
+            });
+        })
+    </script>
+    <hr>
+    <!-- 最新消息 -->
+    <div id="news">
+        <h2>News-1</h2>
+        <button class="btn-1">see more</button>
+        <div class="news-content"
+            style="display: none;width: 80%; height: 50px;padding: 50px 0; background-color: cadetblue; color: white; text-align: center;">
+            <p>叉燒飯就是叉燒飯，加顆蛋最多20幾塊錢一碗，黯什麼然，銷什麼魂飯</p>
+        </div>
+
+        <h2>News-2</h2>
+        <button class="btn-2">see more</button>
+        <div class="news-content2"
+            style="display: none;width: 80%; height: 50px;padding: 50px 0; background-color: cadetblue; color: white; text-align: center;">
+            <p>好折凳!折凳的奧妙之處在於隨手可得，還可以坐著來隱藏殺機。就算被警察抓了也告不了你</p>
+        </div>
+
+        <h2>News-3</h2>
+        <button class="btn-3">see more</button>
+        <div class="news-content3"
+            style="display: none;width: 80%; height: 50px;padding: 50px 0; background-color: cadetblue; color: white; text-align: center;">
+            <p>一鄉二里共三夫子，不識四書五經六義，竟敢教七八九子，十分大膽</p>
+        </div>
+    </div>
+
+<style>
+    #news button{
+        border: none;
+        background-color: darkcyan;
+        color: white;
+        width: 80%;
+        height: 30px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+
+    <script>
+
+        $(function () {
+            $('.btn-1').click(function () {
+                $('.news-content').slideToggle(350)
+            })
+            $('.btn-2').click(function () {
+                $('.news-content2').slideToggle(350)
+            })
+            $('.btn-3').click(function () {
+                $('.news-content3').slideToggle(350)
+            })
+        })
+    </script>
+<!-- animate -->
+<button id="up">up</button>
+<button id="down">down</button>
+<button id="right">right</button>
+<button id="left">left</button>
+<button id="zoomIn">zoom in</button>
+<button id="zoomOut">zoom out</button>
+<button id="zoom">zoom</button>
+<button id="zoom2">zoom2</button>
+<button id="BG-COLOR">BG-COLOR</button>
+<div class="ani">
+    <p>Mario</p>
+</div>
+<style>
+    .ani{
+        position: relative;
+        height: 50vh;
+        background-color:darkred;
+        width: 75px;
+        height: 50px;
+        margin-top: 50px;
+        text-align: center;
+        font-weight: bold;
+        position: absolute;
+        color: white;
+    }
+    .ani p{
+
+    }
+</style>
+<script>
+$(function(){
+    $('#up').click(function(){
+        $('.ani').animate({top:'-50px'})
+    })
+    $('#down').click(function(){
+        $('.ani').animate({top:'50px'})
+    })
+    $('#right').click(function(){
+        $('.ani').animate({left:'50px'})
+    })
+    $('#left').click(function(){
+        $('.ani').animate({left:'-50px'})
+    })
+    $('#zoomIn').click(function(){
+        $('.ani').animate({
+            width:'300px',
+            height:'300px',
+            fontSize:'40px',
+        })
+    })
+    $('#zoomOut').click(function(){
+        $('.ani').animate({
+        width: '75px',
+        height: '50px',
+        marginTop: '50px',
+        textAlign: 'center',
+        fontSize:'16px',
+        })
+    })
+    $('#zoom').click(function(){
+        $('.ani').animate({
+            width:'toggle',
+            height:'toggle',
+            fontSize:'toggle',
+        })
+    })
+    $('#zoom2').click(function(){
+        $('.ani').animate({
+            height:'toggle',
+            fontSize:'toggle',
+        })
+    })
+    $('#BG-COLOR').click(function(){
+        $('.ani').css({
+            'background-color':'cornflowerblue',
+            'color':'white',
+            'transform':'scale(2)',
+            'transition':'all'
+        })
+    })
+})
+</script>
+</body>
+
+</html>

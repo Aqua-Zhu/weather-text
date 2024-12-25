@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="imgCycle">
+        <img src="./images/06.jpg" alt="">
+        <img src="./images/07.jpg" alt="">
+        <img src="./images/03.jpg" alt="">
+        <img src="./images/04.jpg" alt="">
+        <img src="./images/05.jpg" alt="">
+    </div>
+
+    <!-- 載入JQuery -->
+    <script src="./jquery-3.7.1.min.js"></script>
+    <!-- 載入輪播主程式 -->
+    <script src="./js/jquery.cycle.all.js"></script>
+    <!-- 撰寫自己的JQuery -->
+    <script>
+        $(function () {
+            // 預設為淡入淡出
+            $('#imgCycle').cycle({
+                fx: 'fade',    //輪播方式
+                sync: false,   //有無錢一張的殘影
+                delay: -2000,  //第一次第一張圖停留的時間
+                timeout:1000,  //輪播速度
+
+            });
+        })
+    </script>
+</body>
+
+</html>
