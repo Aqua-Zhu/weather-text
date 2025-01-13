@@ -10,10 +10,16 @@ export default function Navber() {
                     <Link to='/'>首頁</Link>
                 </li>
                 <li>
-                    <Link to='about'>關於我</Link>
+                    <Link to='/about'>關於我</Link>
                 </li>
                 <li>
-                <Link to='news'>news</Link>
+                <Link to='/news'>news</Link>
+                </li>
+                <li>
+                    <Link to='/login'>login</Link>
+                </li>
+                <li>
+                    <Link to='/user'>user</Link>
                 </li>
             </ul>
         </div>
